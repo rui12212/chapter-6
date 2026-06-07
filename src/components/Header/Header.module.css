@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(95, 95, 95);
+    color: aliceblue;
+    padding: 24px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLink{
+    color: #fff;
+}
