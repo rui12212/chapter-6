@@ -115,3 +115,8 @@
         width:100%;
     }
 } 
+
+.tileLink {
+    text-decoration: none;
+    color:inherit;
+}

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { posts } from "../../data/posts";
 import classes from "./Detail.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Detail = () => {
   // オブジェクトが返ってくる {postId: ??}
@@ -9,6 +9,14 @@ export const Detail = () => {
   const intPostId = Number(postId.postId);
   const targetPost = posts.find((post) => post.id === intPostId);
 
+  if (!targetPost) {
+    return (
+    <>
+      <p className={classes.errorText}>記事が見つかりませんでした</p>
+      <Link to="/" className={classes.goBackHome}>記事一覧へ戻る</Link>
+    </>
+    )
+  }
   return (
     <div className={classes.bodyPreset}>
       <span className={classes.imageBox}>
@@ -36,7 +44,9 @@ export const Detail = () => {
           className={classes.postContent}
           dangerouslySetInnerHTML={{ __html: targetPost.content }}
         />
-        <Link to="/" className={classes.goBackHome}>記事一覧へ戻る</Link>
+        <Link to="/" className={classes.goBackHome}>
+          記事一覧へ戻る
+        </Link>
       </div>
     </div>
   );
