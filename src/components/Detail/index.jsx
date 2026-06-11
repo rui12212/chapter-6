@@ -11,11 +11,13 @@ export const Detail = () => {
 
   if (!targetPost) {
     return (
-    <>
-      <p className={classes.errorText}>記事が見つかりませんでした</p>
-      <Link to="/" className={classes.goBackHome}>記事一覧へ戻る</Link>
-    </>
-    )
+      <>
+        <p className={classes.errorText}>記事が見つかりませんでした</p>
+        <Link to="/" className={classes.goBackHome}>
+          記事一覧へ戻る
+        </Link>
+      </>
+    );
   }
   return (
     <div className={classes.bodyPreset}>

@@ -11,7 +11,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/detail">
-          <Route index={true}/>
+          <Route index={true} />
           <Route path=":postId" element={<Detail />}></Route>
         </Route>
       </Routes>
