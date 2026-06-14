@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Load } from "../Load";
 
 export const Detail = () => {
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState(null);
   const [loadEnd, setLoadEnd] = useState(false);
 
   // オブジェクトが返ってくる {postId: ??}
