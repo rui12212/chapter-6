@@ -83,7 +83,7 @@ export const Contact = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.strigify({
+          body: JSON.stringify({
             name: form.name,
             email: form.email,
             content: form.content,
