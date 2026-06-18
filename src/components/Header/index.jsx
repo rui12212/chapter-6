@@ -8,9 +8,9 @@ export const Header = () => {
       <Link to="/" className={classes.headerLink}>
         Blog
       </Link>
-      <a href="/contact" className={classes.headerLink}>
+      <Link to="/contact" className={classes.headerLink}>
         お問い合わせ
-      </a>
+      </Link>
     </header>
   );
 };

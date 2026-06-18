@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Routes, Route, Link } from "react-router-dom";
 import { Detail } from "./components/Detail";
+import { Contact } from "./components/Contact";
 import { Load } from "./components/Load";
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
           <Route index={true} />
           <Route path=":postId" element={<Detail />}></Route>
         </Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </>
   );
