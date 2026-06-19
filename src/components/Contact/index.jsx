@@ -110,7 +110,6 @@ export const Contact = () => {
 
     } catch (error) {
       window.alert("送信に失敗しました。下記に");
-      setIsDisable(false);
     } finally{
       setIsDisable(false);
     }    
@@ -130,7 +129,8 @@ export const Contact = () => {
               value={form.name}
               onChange={handleForm}
               className={classes.nameForm}
-            ></input>
+              disabled={isDisable}
+            />
             {!hasName ? (
               <span className={classes.error}>名前の記入は必須です</span>
             ) : !properLengthName ? (
@@ -148,7 +148,8 @@ export const Contact = () => {
               value={form.email}
               onChange={handleForm}
               className={classes.emailForm}
-            ></input>
+              disabled={isDisable}
+            />
             {!hasEmail ? (
               <span className={classes.error}>
                 メールアドレスの記入は必須です
@@ -170,6 +171,7 @@ export const Contact = () => {
               value={form.content}
               onChange={handleForm}
               className={classes.contentForm}
+              disabled={isDisable}
             ></textarea>
             {hasContent ? null : (
               <span className={classes.error}>本文の記入は必須です</span>
