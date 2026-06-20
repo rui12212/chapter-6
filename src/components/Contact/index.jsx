@@ -100,12 +100,10 @@ export const Contact = () => {
           default:
             window.alert("エラーが発生しました");
         }
-        setIsDisable(false);
       }
 
       const data = await res.json();
       window.alert(`結果:${data.message}: ありがとうございます。返信をお待ちください。`);
-      setIsDisable(false);
       clearAllInput();
 
     } catch (error) {
